@@ -1,3 +1,8 @@
+UI:
+![Screenshot 2023-09-06 175229](https://github.com/raj-vanamala/manufac/assets/66354732/39403450-a819-4695-8669-656688067425)
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
