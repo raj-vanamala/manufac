@@ -1,23 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import GammaData from './GammaData';
+import MeanMedianMode from './MeanMedianMode';
+import data from './Wine-Data.json';
+import {processData, processGammaData} from './helpers/DataProcessing';
+import {useEffect, useState} from 'react'
 
 function App() {
+
+  const [isDataAvailable , setIsDataAvailable] = useState(false);
+  const [preProcessedData, setPreProcessedData] = useState([]);
+  const [preProcessedGammaData, setPreProcessedGammaData] = useState([]);
+  useEffect(() => {
+    const filteredValues = processData(data);
+    setPreProcessedData(filteredValues);
+    const gammaData = processGammaData(data);
+    setPreProcessedGammaData(gammaData);
+    setIsDataAvailable(true);
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {
+        isDataAvailable ? <MeanMedianMode data = {preProcessedData} /> : "Loading..."
+      }
+      {
+        isDataAvailable ? <GammaData data = {preProcessedGammaData} /> : "Loading..."
+      }
     </div>
   );
 }
