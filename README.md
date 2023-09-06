@@ -22,3 +22,7 @@ You may also see any lint errors in the console.
 
 ### Steps to run this project in your local
 
+1. git clone https://github.com/raj-vanamala/manufac.git
+2. Navigate to project directory and run "yarn install"
+3. After successful installation of node_modules, run "yarn start"
+
