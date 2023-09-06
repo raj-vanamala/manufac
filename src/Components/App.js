@@ -1,8 +1,8 @@
-import './App.css';
+import '../App.css';
 import GammaData from './GammaData';
 import MeanMedianMode from './MeanMedianMode';
-import data from './Wine-Data.json';
-import {processData, processGammaData} from './helpers/DataProcessing';
+import data from '../Resources/Wine-Data.json';
+import {processData, processGammaData} from '../helpers/DataProcessing';
 import {useEffect, useState} from 'react'
 
 function App() {

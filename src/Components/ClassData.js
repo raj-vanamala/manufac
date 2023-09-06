@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import {calculateMean, calculateMedian, calculateMode} from './helpers/MathematicalFunctions'
+import {calculateMean, calculateMedian, calculateMode} from '../helpers/MathematicalFunctions'
 
 function ClassData({classData}) {
 
